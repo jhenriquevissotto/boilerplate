@@ -1,5 +1,3 @@
-import '../styles/globals.css'
-
 import { Providers } from '~/src'
 import { Packs } from '~/src/types'
 

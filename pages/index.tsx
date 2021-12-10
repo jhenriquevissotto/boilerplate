@@ -1,6 +1,6 @@
 import { resources, use, Modules } from '~/src'
 import { I } from '~/src/types'
-import { MyApp } from '~/view'
+import { MyApp, Button } from '~/view'
 
 
 
@@ -55,7 +55,8 @@ export default function PageIndex() {
         <MyApp>
             <h1>Hello World</h1>
             {/* <h2>{state.message}</h2> */}
-            <button onClick={handlers.onClick} >Load</button>
+            <Button.Accept onClick={handlers.onClick} />
+            <Button.Cancel />
         </MyApp>
     )
 }

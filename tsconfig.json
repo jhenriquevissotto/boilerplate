@@ -33,6 +33,8 @@
       "~/frontend/*":   ["frontend/*"],
       "~/libs":         ["libs"],
       "~/libs/*":       ["libs/*"],
+      "~/public":       ["public"],
+      "~/public/*":     ["public*"],
       "~/src":          ["src"],
       "~/src/*":        ["src/*"],
       "~/state":        ["state"],
