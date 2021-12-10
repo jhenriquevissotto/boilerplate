@@ -1,12 +1,10 @@
-import { ServerStyleSheet } from 'styled-components'
-import { packs } from '~/src'
+import { packs, helpers } from '~/src'
 import { Packs } from '~/src/types'
-
 
 
 export default class MyDocument extends packs.next.Document {
   static async getInitialProps(ctx: Packs.Next.DocumentContext) {
-    const sheet = new ServerStyleSheet()
+    const sheet = new helpers.style.ServerStyleSheet()
     const originalRenderPage = ctx.renderPage
 
     try {

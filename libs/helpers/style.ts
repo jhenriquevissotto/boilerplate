@@ -1,1 +1,4 @@
-export { createGlobalStyle as createGlobal } from 'styled-components'
+export { 
+    ServerStyleSheet, 
+    createGlobalStyle as createGlobal,
+} from 'styled-components'
