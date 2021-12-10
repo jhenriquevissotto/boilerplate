@@ -1,0 +1,57 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": false,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "~/app":          ["app"],
+      "~/app/*":        ["app/*"],
+      "~/backend":      ["backend"],
+      "~/backend/*":    ["backend/*"],
+      "~/database":     ["database"],
+      "~/database/*":   ["database/*"],
+      "~/global":       ["global"],
+      "~/global/*":     ["global/*"],
+      "~/ioc":          ["ioc"],
+      "~/ioc/*":        ["ioc/*"],
+      "~/frontend":     ["frontend"],
+      "~/frontend/*":   ["frontend/*"],
+      "~/libs":         ["libs"],
+      "~/libs/*":       ["libs/*"],
+      "~/src":          ["src"],
+      "~/src/*":        ["src/*"],
+      "~/state":        ["state"],
+      "~/state/*":      ["state/*"],
+      "~/types":        ["types"],
+      "~/types/*":      ["types/*"],
+      "~/view":         ["view"],
+      "~/view/*":       ["view/*"],
+      "~/html":         ["view/html"],
+      "~/html/*":       ["view/html/*"]
+    },
+    "incremental": true
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
