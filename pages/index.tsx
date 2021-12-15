@@ -1,6 +1,6 @@
 import { resources, use, Modules, routes, helpers } from '~/src'
 import { I } from '~/src/types'
-import { MyApp, Button } from '~/view'
+import { MyApp, Button, Link } from '~/view'
 
 import { useQuery } from 'react-query'
 
@@ -65,7 +65,7 @@ export default function PageIndex() {
             <Button.Cancel />
             
             <nav className={helpers.cn({  })} >
-                <a href={routes.next.index.pattern} >GO TO HOME PAGE</a>
+                <Link href={routes.next.index.pattern} >GO TO HOME PAGE</Link>
             </nav>
 
         </MyApp>

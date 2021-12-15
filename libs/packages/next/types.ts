@@ -7,3 +7,5 @@ export type {
 export type { DocumentContext } from 'next/document'
 
 export type { AppProps } from 'next/app'
+
+export type { LinkProps } from 'next/link'
