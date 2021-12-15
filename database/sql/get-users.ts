@@ -19,7 +19,7 @@ export const getUsers = {
     `,
     call: ([props, binds]: [GetUsers.Props, GetUsers.Binds]) => {
         const query = sql.getUsers.query(props)
-        const call = libs.helpers.resolve<GetUsers.Data>(db.run.raw(query, binds))
+        const call = libs.helpers.resolvers.knex<GetUsers.Data>(db.run.raw(query, binds))
         return call
     }
 }

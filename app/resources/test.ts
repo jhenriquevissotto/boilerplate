@@ -20,7 +20,7 @@ export const test = {
     },
     call: (req: Resources.Test.Req) => {
         const endpoint = resources.test.endpoint(req)
-        const call = libs.helpers.response<Resources.Test.Res>(Api.Axios.get(endpoint))
+        const call = libs.helpers.resolvers.axios<Resources.Test.Res>(Api.Axios.get(endpoint))
         return call
     }
 }

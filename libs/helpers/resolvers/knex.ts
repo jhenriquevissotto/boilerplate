@@ -1,6 +1,4 @@
-
-
-export module Resolve {
+export module Knex {
     export type Params = any
     export type Return<D = any, E = any> = {
         isError: boolean
@@ -9,7 +7,8 @@ export module Resolve {
     }
 }
 
-export function resolve<D = any, E = any>(database: Resolve.Params) {
+
+export function knex<D = any, E = any>(database: Knex.Params) {
     return database.then(([data]: [D]) => {
         return ({
             isError: false,
@@ -23,5 +22,5 @@ export function resolve<D = any, E = any>(database: Resolve.Params) {
             data: null,
             error,
         })
-    }) as Promise<Resolve.Return<D, E>>
+    }) as Promise<Knex.Return<D, E>>
 }

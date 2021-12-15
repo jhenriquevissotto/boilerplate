@@ -2,7 +2,7 @@ import { libs } from '~/src'
 import { Libs } from '~/src/types'
 
 
-export function parseRouter(request: Libs.Packs.Next.ApiRequest) {
+export function parseRouter(request: Libs.Packs.Next.Req) {
     
     const { url, query, body } = request
 

@@ -1,6 +1,6 @@
 import { Packs } from '~/src/types'
 
-export module Response {
+export module Axios {
     export type Params = any
     export type Return<T = any, D = any> = {
         isError: boolean
@@ -10,7 +10,7 @@ export module Response {
     }
 }
 
-export function response<T = any, D = any>(request: Response.Params) {
+export function axios<T = any, D = any>(request: Axios.Params) {
     return request.then((response: Packs.Axios.Response<T, D>) => {
         return ({
             isError: false,
@@ -26,5 +26,5 @@ export function response<T = any, D = any>(request: Response.Params) {
             status: response.status,
             error,
         })
-    }) as Promise<Response.Return<T, D>>
+    }) as Promise<Axios.Return<T, D>>
 }

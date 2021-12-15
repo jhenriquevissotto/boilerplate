@@ -18,7 +18,7 @@ export const getUsers = {
     },
     call: (req: Resources.Test.Req) => {
         const endpoint = resources.test.endpoint(req)
-        const call = libs.helpers.response<Resources.GetUsers.Res>(Api.Axios.get(endpoint))
+        const call = libs.helpers.resolvers.axios<Resources.GetUsers.Res>(Api.Axios.get(endpoint))
         return call
     }
 }
