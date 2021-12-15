@@ -1,6 +1,8 @@
-import { resources, use, Modules } from '~/src'
+import { resources, use, Modules, routes, helpers } from '~/src'
 import { I } from '~/src/types'
 import { MyApp, Button } from '~/view'
+
+import { useQuery } from 'react-query'
 
 
 
@@ -37,6 +39,10 @@ export default function PageIndex() {
     // })
 
 
+
+
+
+
     const handlers = {
         onClick: async () => {
             const { isError, data, error } = await resources.getUsers.call({})
@@ -57,6 +63,11 @@ export default function PageIndex() {
             {/* <h2>{state.message}</h2> */}
             <Button.Accept onClick={handlers.onClick} />
             <Button.Cancel />
+            
+            <nav className={helpers.cn({  })} >
+                <a href={routes.next.index.pattern} >GO TO HOME PAGE</a>
+            </nav>
+
         </MyApp>
     )
 }

@@ -1,4 +1,4 @@
-import { api, resources, libs } from '~/src'
+import { Api, resources, libs, routes } from '~/src'
 import { Resources } from '~/src/types'
 
 
@@ -20,7 +20,7 @@ export const test = {
     },
     call: (req: Resources.Test.Req) => {
         const endpoint = resources.test.endpoint(req)
-        const call = libs.helpers.response<Resources.Test.Res>(api.get(endpoint))
+        const call = libs.helpers.response<Resources.Test.Res>(Api.Axios.get(endpoint))
         return call
     }
 }

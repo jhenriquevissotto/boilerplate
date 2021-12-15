@@ -1,1 +1,8 @@
-export { debounce, throttle, pick, omit } from 'lodash'
+export { 
+    debounce, 
+    throttle, 
+    pick, 
+    omit,
+    each,
+    forEach, 
+} from 'lodash'

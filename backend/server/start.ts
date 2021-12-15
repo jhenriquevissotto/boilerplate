@@ -1,5 +1,5 @@
 
-import { utils, helpers, packs, routes, servers, ctrl } from '~/src'
+import { utils, helpers, packs, router, servers, ctrl } from '~/src'
 
 
 export function start({ port }) {
@@ -30,7 +30,7 @@ export function start({ port }) {
 
         // routes
         servers.express.use(ctrl.next)
-        servers.express.use('/express', routes.express)
+        servers.express.use('/express', router.express)
         
 
         // running

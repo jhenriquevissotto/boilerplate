@@ -1,7 +1,11 @@
-import { router, ctrl } from '~/src'
+import { router, routes, ctrl } from '~/src'
 
 
-router.express.get('/wellcome', ctrl.wellcome)
+export const expressRoutes = {
+    wellcome: {
+        endpoint: () => '/wellcome',
+    }
+}
 
 
-export const express = router.express
+router.express.get(routes.express.wellcome.endpoint(), ctrl.wellcome)

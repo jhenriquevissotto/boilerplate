@@ -1,3 +1,6 @@
-export const next = [
-    { pattern: '/', page: '/index' },
-]
+export const nextRoutes = {
+    index: {
+        pattern: '/', 
+        page: '/index,' 
+    },
+}

@@ -1,9 +1,9 @@
-import { helpers, routes } from '~/src'
+import { helpers, routes, utils } from '~/src'
 
-const next = new helpers.NextRouter()
+const nextRouter = new helpers.NextRouter()
 
-routes.next.forEach(route => {
-    next.add(route.pattern, route.page)
+utils._.forEach(routes.next, ({ pattern, page }) => {
+    nextRouter.add(pattern, page)
 })
 
-export { next }
+export { nextRouter }

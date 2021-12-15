@@ -14,7 +14,6 @@ export const wellcome = (
         const response = {
             message: 'Hello, world!',
         } as Ctrl.Wellcome.Res
-    
 
         return res.status(200).send(response)
     } catch (error) {
