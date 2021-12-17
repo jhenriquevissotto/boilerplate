@@ -1,9 +1,8 @@
-import { resources, use, Modules, routes, helpers } from '~/src'
+import { resources, use, Modules, routes, helpers, utils } from '~/src'
 import { I } from '~/src/types'
-import { MyApp, Button, Link, Text } from '~/view'
+import { MyApp, Button, Link, T } from '~/view'
 
 import { useQuery } from 'react-query'
-
 
 
 export default function PageIndex() {
@@ -59,7 +58,7 @@ export default function PageIndex() {
 
     return (
         <MyApp>
-            <Text.Headline tag='h1'>Hello World</Text.Headline>
+            <T as='h1'>Hello World</T>
             {/* <h2>{state.message}</h2> */}
             <Button.Accept onClick={handlers.onClick} />
             <Button.Cancel />

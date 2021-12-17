@@ -1,16 +1,11 @@
 import { Packs, Ctrl } from '~/src/types'
 
-
-export const wellcome = (
-    req: Packs.Express.Req & Ctrl.Wellcome.Req, 
-    res: Packs.Express.Res
-) => {
+export const wellcome = (req: Packs.Express.Req & Ctrl.Wellcome.Req, res: Packs.Express.Res) => {
     try {
         // const {} = req.params
         // const {} = req.query
         // const {} = req.body
-    
-        
+
         const response = {
             message: 'Hello, world!',
         } as Ctrl.Wellcome.Res

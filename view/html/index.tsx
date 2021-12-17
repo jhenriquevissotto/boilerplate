@@ -1,3 +1,3 @@
 export * from './fragments'
 export * from './link'
-export * as Text from './text'
+export { Text as T } from './text'

@@ -1,5 +1,4 @@
 import { packs, stores, Api } from '~/src'
-import { Store } from '~/src/types'
 
 
 export function createStore() {
