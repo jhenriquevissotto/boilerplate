@@ -1,7 +1,7 @@
-const { pipe } = require('ramda')
+const { compose } = require('ramda')
 const nextTranslate = require('next-translate')
 
-const withExtensions = pipe(nextTranslate)
+const withExtensions = compose(nextTranslate)
 
 const nextConfig = withExtensions({
     webpack: (config) => {

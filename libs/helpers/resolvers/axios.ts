@@ -4,27 +4,29 @@ export module Axios {
     export type Params = any
     export type Return<T = any, D = any> = {
         isError: boolean
-        data: T,
-        status: number,
+        data: T
+        status: number
         error: null | Omit<Packs.Axios.Error<T, D>, 'response'>
     }
 }
 
 export function axios<T = any, D = any>(request: Axios.Params) {
-    return request.then((response: Packs.Axios.Response<T, D>) => {
-        return ({
-            isError: false,
-            data:   response.data,
-            status: response.status,
-            error: null
+    return request
+        .then((response: Packs.Axios.Response<T, D>) => {
+            return {
+                isError: false,
+                data: response.data,
+                status: response.status,
+                error: null,
+            }
         })
-    }).catch(({ response, ...error }: Packs.Axios.Error<T, D>) => {
-        console.error(error)
-        return ({
-            isError: true,
-            data:   response.data,
-            status: response.status,
-            error,
-        })
-    }) as Promise<Axios.Return<T, D>>
+        .catch(({ response, ...error }: Packs.Axios.Error<T, D>) => {
+            console.error(error)
+            return {
+                isError: true,
+                data: response.data,
+                status: response.status,
+                error,
+            }
+        }) as Promise<Axios.Return<T, D>>
 }

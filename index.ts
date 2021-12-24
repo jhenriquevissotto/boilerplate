@@ -1,7 +1,5 @@
-require('sucrase/register')
+import 'sucrase/register'
 
-
-import { server } from '~/src' 
-
+import { server } from '~/src'
 
 server.start({ port: 3000 })
