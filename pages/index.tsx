@@ -1,6 +1,6 @@
 import { resources, use, Modules, routes, helpers, utils } from '~/src'
 import { I } from '~/src/types'
-import { MyApp, Button, Link, T } from '~/view'
+import { MyApp, Button, Link, T, Cond } from '~/view'
 
 import { useQuery } from 'react-query'
 

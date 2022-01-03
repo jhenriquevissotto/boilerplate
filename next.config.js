@@ -1,13 +1,13 @@
-const { compose } = require('ramda')
-const nextTranslate = require('next-translate')
+// const { compose } = require('ramda')
+// const nextTranslate = require('next-translate')
 
-const withExtensions = compose(nextTranslate)
+// const withExtensions = compose(nextTranslate)
 
-const nextConfig = withExtensions({
+const nextConfig = {
     webpack: (config) => {
         config.resolve.fallback = { fs: false }
         return config
     },
-})
+}
 
 module.exports = nextConfig
