@@ -30,6 +30,8 @@
             "~/libs/*": ["libs/*"],
             "~/public": ["public"],
             "~/public/*": ["public*"],
+            "~/fonts": ["public/assets/media/fonts"],
+            "~/fonts/*": ["public/assets/media/fonts*"],
             "~/src": ["src"],
             "~/src/*": ["src/*"],
             "~/state": ["state"],
@@ -41,7 +43,8 @@
             "~/html": ["view/html"],
             "~/html/*": ["view/html/*"]
         },
-        "incremental": true
+        "incremental": true,
+        "isolatedModules": true
     },
     "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
     "exclude": ["node_modules"]

@@ -1,5 +1,4 @@
 export module Knex {
-    export type Params = any
     export type Return<D = any, E = any> = {
         isError: boolean
         data: null | D
@@ -7,7 +6,7 @@ export module Knex {
     }
 }
 
-export function knex<D = any, E = any>(database: Knex.Params) {
+export function knex<D = any, E = any>(database: any, fallbackData: D) {
     return database
         .then(([data]: [D]) => {
             return {
@@ -20,7 +19,7 @@ export function knex<D = any, E = any>(database: Knex.Params) {
             console.error(error)
             return {
                 isError: true,
-                data: null,
+                data: null || fallbackData,
                 error,
             }
         }) as Promise<Knex.Return<D, E>>

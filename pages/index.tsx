@@ -1,4 +1,4 @@
-import { resources, use, Modules, routes, helpers, utils } from '~/src'
+import { resources, use, Modules, routes, helpers, utils, Assets } from '~/src'
 import { I } from '~/src/types'
 import { MyApp, Button, Link, T, Cond } from '~/view'
 
