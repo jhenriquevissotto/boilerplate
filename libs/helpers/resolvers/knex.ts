@@ -6,7 +6,7 @@ export module Knex {
     }
 }
 
-export function knex<D = any, E = any>(database: any, fallbackData: D) {
+export function knex<D = any, E = any>(database: any, fallbackData?: D) {
     return database
         .then(([data]: [D]) => {
             return {

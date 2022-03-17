@@ -1,7 +1,7 @@
 import { Assets } from '~/src'
 import { MyDocument } from '~/view'
 
-export function Providers({ children }) {
+export function Provider({ children }) {
     return (
         <MyDocument>
             <Assets.Styles.Global />

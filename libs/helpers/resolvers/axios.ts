@@ -9,7 +9,7 @@ export module Axios {
     }
 }
 
-export function axios<T = any, D = any>(request: any, fallbackData: T) {
+export function axios<T = any, D = any>(request: any, fallbackData?: T) {
     return request
         .then((response: Packs.Axios.Response<T, D>) => {
             return {
